@@ -13,8 +13,8 @@ def politeness(response):
 # OAuth2 process
 def oAuth2():
     base_url = 'https://www.reddit.com/'
-    data = {'grant_type': 'password', 'username': "Sissi_Jian", 'password': "!QAZ3edc%TGB"}
-    auth = requests.auth.HTTPBasicAuth("pLK_612r_jC05bUcrccOOQ", "WbI4kHa5o0pd9tRK6YiWXntqzzE3IA")
+    data = {'grant_type': 'password', 'username': credential["username"], 'password': credential["password"]}
+    auth = requests.auth.HTTPBasicAuth(credential["appID"], credential["secret"])
     r = requests.post(base_url + 'api/v1/access_token', data=data, headers={'user-agent': 'APP-NAME by REDDIT-USERNAME'},auth=auth)
     return r.json()["token_type"] + " " + r.json()["access_token"]
 
@@ -29,6 +29,10 @@ def getCommunities():
             communities.append(j.text)
     return communities
 
+#Get all reddit api credentials
+with open(r"redditCredential.pickle", "rb") as input_file:
+    credential = pickle.load(input_file)
+
 #Get all communities on Reddit
 if os.path.exists(r"communities.pickle"):
     with open(r"communities.pickle", "rb") as input_file:
@@ -37,6 +41,7 @@ else:
     communities = getCommunities()
     with open(r"communities.pickle", "wb") as output_file:
         pickle.dump(communities, output_file)
+
 
 #response.status_code
 token = oAuth2()
