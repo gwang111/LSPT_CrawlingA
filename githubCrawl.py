@@ -26,14 +26,14 @@ def politeness(response):
 while not stop:
     rangeFollowers = tmpFollowers
     for i in range(10):
-        users_params={"sort":"followers", "q":f"followers:100000..{rangeFollowers}", "page":i+1, "per_page":100}
+        users_params={"sort":"followers", "q":f"followers:0..{rangeFollowers}", "page":i+1, "per_page":100}
         usersRes = requests.get(users_url, headers=headers, params=users_params)
         politeness(usersRes)
         if len(usersRes.json()['items']) == 0:
             stop = True        
         for j in range(len(usersRes.json()['items'])):
             username = usersRes.json()['items'][j]["login"]
-            crawledUrls[usersRes.json()['items'][j]["html_url"]] = usersRes.json()['items'][j]["updated_at"]
+            crawledUrls[usersRes.json()['items'][j]["html_url"]] = time.time()
             print(usersRes.json()['items'][j]["html_url"])
             # crawl the first 1000 (at most) repos of a user, sorting by number of stars
             for k in range(10):
@@ -43,7 +43,7 @@ while not stop:
                 if len(reposRes.json()['items']) == 0:
                     break
                 for l in range(len(reposRes.json()['items'])):
-                    crawledUrls[reposRes.json()['items'][l]["html_url"]] = reposRes.json()['items'][l]["updated_at"]
+                    crawledUrls[reposRes.json()['items'][l]["html_url"]] = time.time()
                     #print(reposRes.json()['items'][l]["html_url"])
             # record the num of followers of last user in the batch
             if j == len(usersRes.json()['items']) - 1:
@@ -51,5 +51,4 @@ while not stop:
                 userRes = requests.get(user_url, headers=headers)
                 politeness(userRes)
                 tmpFollowers = userRes.json()["followers"]
-                #print(tmpFollowers)
 
