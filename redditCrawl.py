@@ -53,7 +53,6 @@ crawledUrls = {}
 random.seed(time.time())
 numCommunities = len(communities)
 params = {"limit": 100}
-print("start")
 count = 0
 
 while len(communities) != 0:
