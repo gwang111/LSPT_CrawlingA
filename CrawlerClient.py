@@ -1,4 +1,4 @@
-#import SissiCrawler
+from SissiCrawler import SissiCrawler
 #import JessePriorityQueue
 import multiprocessing as mp
 
@@ -9,10 +9,10 @@ class CrawlerClient():
     def startCrawl(self, seed):
         # parallel via processes
         # initial crawl from seed using sissicrawler -> non-blocking
-        SissiCrawler crawler = SissiCrawler()
+        crawler = SissiCrawler(website="", seeds = [], thread = None, counter = None, crawledUrls = None, badUrls = None)
 
         # start a new SissiCrawler for our initial crawl
-        crawler.crawl(seed)
+        crawler.crawl()
 
         JessePriorityQueue recrawl = None
         while(True):
