@@ -1,6 +1,9 @@
 import requests, re, time, urllib.robotparser, threading
 from urllib.parse import urljoin
 from bs4 import BeautifulSoup
+import logging
+
+logging.basicConfig(format='%(asctime)s - %(message)s', level=logging.INFO)
 
 class urlFetcher:
     def __init__(self, crawledUrls, badUrls):
@@ -128,8 +131,10 @@ class bfsCrawler:
 
     def crawl(self):
         if len(self.seeds) == 1:
+            logging.info("[START CRAWL] (rpi/wiki) 1 URL")
             self.BFS(self.seeds[0], self.website, self.counter)
         else:
+            logging.info("[START CRAWL] (rpi/wiki) >1 URL")
             threads = []
             for url in self.seeds:
                 thread = crawlThread(1, self.BFS, url, self.website, self.counter)

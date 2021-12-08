@@ -1,5 +1,8 @@
 import requests, time, string, pickle, os, random, threading
 from bs4 import BeautifulSoup
+import logging
+
+logging.basicConfig(format='%(asctime)s - %(message)s', level=logging.INFO)
 
 class crawlThread (threading.Thread):
     def __init__(self, threadID, crawl, counter = None):
@@ -70,6 +73,7 @@ class redditCrawler:
                 pickle.dump(self.communities, output_file)
 
     def crawl(self):
+        logging.info("[START CRAWL] (reddit)")
         if self.thread == None:
             self.crawlSingle(self.counter)
         else:

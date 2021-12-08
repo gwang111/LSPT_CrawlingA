@@ -1,6 +1,9 @@
 from bfsCrawl import bfsCrawler
 from githubCrawl import githubCrawler
 from redditCrawl import redditCrawler
+import logging
+
+logging.basicConfig(format='%(asctime)s - %(message)s', level=logging.INFO)
 
 class SissiCrawler:
     def __init__(self, website, seeds = None, thread = None, counter = None, crawledUrls = None, badUrls = None):
@@ -17,17 +20,22 @@ class SissiCrawler:
             if str(type(self.seeds)) != "<class 'list'>":
                 print("must provide a list of seed url for rpi crawler")
                 return None
+            logging.info("[INIT SISSICRAWLER] website: %s, seeds: %s, counter: %d, crawledURLs: %s, badURLs: %s", self.website, self.seeds, self.counter, self.crawledUrls, self.badUrls)
             return bfsCrawler("rpi", self.seeds, self.counter, self.crawledUrls, self.badUrls)
         elif self.website == "wiki":
             if str(type(self.seeds)) != "<class 'list'>":
                 print("must provide a list of seed url for wiki crawler")
                 return None
+            logging.info("[INIT SISSICRAWLER] website: %s, seeds: %s, counter: %d, crawledURLs: %s, badURLs: %s", self.website, self.seeds, self.counter, self.crawledUrls, self.badUrls)
             return bfsCrawler("wiki", self.seeds, self.counter, self.crawledUrls, self.badUrls)
         elif self.website == "github":
+            logging.info("[INIT SISSICRAWLER] website: %s, counter: %d, crawledURLs: %s", self.website, self.counter, self.crawledUrls)
             return githubCrawler(self.counter, self.crawledUrls)
         elif self.website == "reddit":
+            logging.info("[INIT SISSICRAWLER] website: %s, thread: %d, counter: %d, crawledURLs: %s", self.website, self.thread, self.counter, self.crawledUrls)
             return redditCrawler(self.thread, self.counter, self.crawledUrls)
         else:
+            logging.info("[ERROR] Website not supported")
             print("website not supported!")
             return None
 
@@ -42,8 +50,9 @@ if __name__ == "__main__":
     wikiSeeds = ['https://en.wikipedia.org/wiki/Tiger', 'https://zh.wikipedia.org/wiki/%E8%99%8E']
     rpiSeed = ['https://rpi.edu']
     wikiSeed = ['https://en.wikipedia.org/wiki/Tiger']
+    testSeed = ['http://localhost/ITWS-Cooking-Site/']
     # you can pass in {} or set() to the crawler creator if you want to set crawledUrls / badUrls to be global var
-    a = SissiCrawler("rpi", rpiSeed, None, 30, None, None) # rpi crawler
+    a = SissiCrawler("rpi", testSeed, None, 30, None, None) # rpi crawler
     #a = SissiCrawler("rpi", rpiSeeds, None, 30, None, None) # rpi crawler, threaded
     #a = SissiCrawler("wiki", wikiSeed, None, 30, None, None) # wiki crawler
     #a = SissiCrawler("wiki", wikiSeeds, None, 30, None, None) # wiki crawler threaded

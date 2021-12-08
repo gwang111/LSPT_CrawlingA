@@ -1,4 +1,7 @@
 import requests, os, time
+import logging
+
+logging.basicConfig(format='%(asctime)s - %(message)s', level=logging.INFO)
 
 class githubCrawler:
     def __init__(self, counter = None, crawledUrls = None):
@@ -17,6 +20,7 @@ class githubCrawler:
                 pass
 
     def crawl(self):
+        logging.info("[START CRAWL] (github)")
         tmpFollowers = 200000
         rangeFollowers = 200000 # cap maximum followers in Github
         stop = False
