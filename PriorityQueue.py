@@ -3,6 +3,10 @@ from random import random
 import datetime
 import heapq
 
+import logging
+
+logging.basicConfig(format='%(asctime)s - %(message)s', level=logging.INFO)
+
 class PriorityItem:
 	def __init__(self, URL, lam, alpha, crawl_time):
 		self.URL = URL
@@ -37,8 +41,8 @@ class PriorityItem:
 		if a > 0:
 			new_lam = self.lam / (1 + a)
 		else:
-			new_lam = lam / (1 + tanh(a))
-		if new_lam > lam:
+			new_lam = self.lam / (1 + tanh(a))
+		if new_lam > self.lam:
 			new_lam *= weight[0]
 		else:
 			new_lam *= weight[1]
@@ -46,6 +50,8 @@ class PriorityItem:
 		new_alpha = max(min(bounds[1], self.alpha * (1 + tanh(1 + a))), bounds[0])
 		self.lam = new_lam
 		self.alpha = new_alpha
+
+		logging.info("[UPDATING HYPER PARAMETERS] Lambda: %d, Alpha: %d, Crawl Time: %d", self.lam, self.alpha, self.crawl_time)
 
 class PriorityQueue:
 	def __init__(self, initial=None, key=lambda x:x):
@@ -68,6 +74,8 @@ class PriorityQueue:
 		else:
 			self.__data__ = []
 
+		logging.info("[PRIORITY QUEUE INITIALIZED]")
+
 	def push(self, item):
 		"""
 		Add item to queue
@@ -82,6 +90,8 @@ class PriorityQueue:
 		heapq.heappush(self.__data__(self.key(item), self.index, item))
 		self.index += 1
 
+		logging.info("[ADDING TO PRIO QUEUE] Item: %s, Index = %d", self.__data__(self.key(item), self.index, item), self.index)
+
 	def pop(self):
 		"""
 		Get top priority item
@@ -93,4 +103,9 @@ class PriorityQueue:
 		- item at the top of the queue
 		"""
 		self.index -= 1
-		return heapq.heappop(self.__data__)[-1]
+
+		top =  heapq.heappop(self.__data__)[-1]
+
+		logging.info("[POPPING FROM PRIO QUEUE] Top: %s, Index = %d", top, self.index)
+
+		return top
