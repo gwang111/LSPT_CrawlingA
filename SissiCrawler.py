@@ -34,6 +34,9 @@ class SissiCrawler:
         elif self.website == "reddit":
             logging.info("[INIT SISSICRAWLER] website: %s, thread: %d, counter: %d, crawledURLs: %s", self.website, self.thread, self.counter, self.crawledUrls)
             return redditCrawler(self.thread, self.counter, self.crawledUrls)
+        elif self.website == "test":
+            logging.info("[INIT SISSICRAWLER] website: %s, seeds: %s, counter: %d, crawledURLs: %s, badURLs: %s", self.website, self.seeds, self.counter, self.crawledUrls, self.badUrls)
+            return bfsCrawler("test", self.seeds, self.counter, self.crawledUrls, self.badUrls)
         else:
             logging.info("[ERROR] Website not supported")
             print("website not supported!")

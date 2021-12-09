@@ -4,13 +4,16 @@ from bs4 import BeautifulSoup
 import logging
 
 logging.basicConfig(format='%(asctime)s - %(message)s', level=logging.INFO)
+testPoliteness = ""
 
 class urlFetcher:
     def __init__(self, crawledUrls, badUrls):
         self.rpiRobot = urllib.robotparser.RobotFileParser()
         self.wikiRobot = urllib.robotparser.RobotFileParser()
+        self.testRobot = urllib.robotparser.RobotFileParser()
         self.politeness(self.rpiRobot, "http://rpi.edu/robots.txt")
         self.politeness(self.wikiRobot, "https://en.wikipedia.org/robots.txt")
+        self.politeness(self.testRobot, testPoliteness)
         self.crawledUrls = crawledUrls
         self.badUrls = badUrls
 
@@ -60,10 +63,13 @@ class urlFetcher:
         return urlsFound
 
     def getRPIUrls(self, url):
-        return self.getUrls(url, self.rpiRobot, self.processRPIUrls);
+        return self.getUrls(url, self.rpiRobot, self.processRPIUrls)
 
     def getWikiUrls(self, url):
-        return self.getUrls(url, self.wikiRobot, self.processWikiUrls);    
+        return self.getUrls(url, self.wikiRobot, self.processWikiUrls)
+    
+    def getTestUrls(self, url):
+        return self.getUrls(url, self.testRobot, self.processTestUrls)
 
     def processRPIUrls(self, url, path):
         if 'rpi' not in path:
@@ -104,6 +110,9 @@ class urlFetcher:
             # url not in desired wiki domain
             return ""
         return path
+    
+    def processTestUrls(self, url, path):
+        return urljoin('https://en.wikipedia.org', path)
 
 class crawlThread (threading.Thread):
     def __init__(self, threadID, bfs, seedUrl, urlFetcher, counter = None):
@@ -153,6 +162,8 @@ class bfsCrawler:
             getUrls = self.urlFetcher.getRPIUrls
         elif urlFilter == "wiki":
             getUrls = self.urlFetcher.getWikiUrls
+        elif urlFilter == "test":
+            getUrls = self.urlFetcher.getTestUrls
         else:
             print("website not supported!")
             return
