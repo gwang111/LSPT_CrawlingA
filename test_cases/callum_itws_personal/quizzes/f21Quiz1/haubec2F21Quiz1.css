@@ -1,0 +1,70 @@
+body {
+  font-family: 'Lato', Arial;
+  font-size: 16px;
+  line-height: 1.4;
+  max-width:1200px;
+  color: #454545;
+  background-color: #fefefe;
+  margin:auto;
+  padding: 1em 2em;
+}
+
+/* have to target the h1 tag and not "qname"
+class, because otherwise we can't center */
+h1 {
+  text-align: center;
+  font-family: 'Roboto Slab', Georgia;
+  margin: 0;
+  padding-top: 1em;
+  color: #c8641e;
+}
+
+h2, h3 {
+  font-family: 'Roboto Slab', Georgia;
+  text-align: center;
+  color: #45b4a2;
+}
+
+h4 {
+  font-family: 'Roboto Slab', Georgia;
+  margin: 0;
+  color: #c8641e;
+}
+
+/* flex container for questions */
+.flex-container-questions {
+  display: flex;
+  flex-flow: column wrap;
+  width: 80%;
+  margin: auto;
+  padding-left:2em;
+  
+  justify-content: space-around;
+  list-style: none;
+}
+
+/* each question is a flex box */
+.question {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: left;
+  list-style: none;
+  width: 90%;
+}
+
+#directions {
+  margin: auto;
+  width: 80%;
+  border: #c8641e thick solid;
+}
+
+#warning {
+  color: rgb(170, 0, 0);
+  text-decoration: underline;
+}
+
+#hint {
+  margin: 0;
+  color: #45b4a2;
+  text-decoration: underline;
+}

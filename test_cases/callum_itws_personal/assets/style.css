@@ -1,0 +1,194 @@
+/* start by removing all margin and padding for consistency */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Lato', Arial;
+  font-size: 16px;
+  line-height: 1.4;
+  color: #454545;
+  background-color: #fefefe;
+}
+/* centering the header and removing margins */
+header {
+  text-align: center;
+  padding-top: 1em;
+}
+footer {
+  text-align: center;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+h1, h2 {
+  font-family: 'Roboto Slab', Georgia;
+}
+
+h2 {
+  margin-bottom: 0.5em;
+}
+
+/* make links less ugly */
+a {
+  color: #45b4a2;
+  font-family: 'Lato', Arial;
+}
+a:visited {
+  color: #268071;
+}
+a:link.no-underline {
+  text-decoration: none;
+}
+
+/* header/main/footer color and spacing */
+.main-page header {
+  color: #c8641e;
+}
+.main-page main {
+  padding: 1em 2em;
+  text-align: center;
+}
+.main-page footer {
+  font-family: 'Roboto Slab', Georgia;
+  color: #c8641e;
+  padding: 0.5em;
+}
+
+.old-style {
+  display: none;
+}
+
+/* jQueryUI Menu Widget */
+.ui-menu {
+  margin: auto;
+  font-family: 'Lato', Arial;
+  color: #2f9786;
+  font-size: 1.5em;
+  max-width: 300px;
+}
+.ui-menu a {
+  color: #2f9786;
+  text-decoration: none;
+}
+
+/* jQueryUI Tabs Widget */
+.ui-tabs {
+  margin: auto;
+  font-family: 'Lato', Arial;
+  color: #2f9786;
+  max-width: 1000px;
+}
+.ui-tabs-nav {
+  font-size: 1.25em;
+}
+
+/* Slider CSS */
+.options {
+  position: fixed;
+  text-align: right;
+  bottom: 30px;
+  right: 20px;
+  width: 150px;
+  height: 50px;
+  padding: 10px;
+}
+
+/* rounded slider - https://www.w3schools.com/howto/howto_css_switch.asp */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+/* Flex CSS */
+.flex-container-parent {
+  display: flex;
+  flex-flow: column wrap;
+  width: 75%;
+  margin: auto;
+  
+  justify-content: space-around;
+  list-style: none;
+}
+.flex-container-child {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  list-style: none;
+}
+.flex-item {
+  border: 10px solid #c8641e;
+  padding: 5px;
+  width: 200px;
+  height: 150px;
+  margin: 20px 10px 10px 10px;
+  text-align: center;
+  line-height: 150px;
+  /* color: white; */
+  font-weight: bold;
+  font-size: 2em;
+  text-align: center;
+}
+.flex-item span {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: normal;
+}

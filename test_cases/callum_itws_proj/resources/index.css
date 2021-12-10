@@ -1,0 +1,119 @@
+body, html {
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+    background-color: #F54A66;
+    overflow: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Readex Pro', sans-serif;
+    margin: 0 0;
+}
+
+#header {
+    font-family: 'Readex Pro', sans-serif;
+    z-index: 1;
+    width: 100vw;
+    box-shadow: 2px 2px 4px 4px rgba(255, 107, 107, 0.1);
+    border-bottom: 2px solid rgb(255, 251, 251);
+    padding: 20px 10px 20px 10px;
+    background-color: #FF6680;
+}
+
+#header * {
+    display: inline-block;
+    width: 200px;
+    text-align: center;
+    color: rgb(255, 251, 251);
+    font-size: 20px;
+}
+#header span a {
+    width: fit-content;
+    color: rgb(255, 251, 251);
+    text-decoration: none;
+}
+#header span a:visited {
+    color: inherit;
+}
+
+#header h1 {
+    width: 400px;
+    font-size: 24px;
+}
+
+#header .active-header-link, #header .active-header-link a {
+    font-weight: 900;
+    text-decoration: underline;
+}
+
+.content-body {
+    width: 1400px;
+    height: 100vh;
+    overflow: scroll;
+    margin: 20px auto 0;
+    background-color: rgb(255, 251, 251);
+    border-radius: 10px 10px 0 0;
+    padding: 10px 20px;
+}
+
+.about-us-content-body {
+    width: 700px;
+}
+
+.content-title {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.recipes-table {
+    table-layout: fixed;
+    width: 100%;
+}
+
+.recipes-table tr td div {
+    background-color: #FF6680;
+    color: rgb(255, 251, 251);
+    border-radius: 8px;
+    padding: 8px;
+    margin: 4px;
+    word-break: break-all;
+}
+.recipes-table tr td div a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.body-end-text {
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+    margin: 15px 0 0;
+}
+
+.block {
+    height: 150px;
+}
+
+.middle-align {
+    text-align: center;
+}
+
+form textarea {
+    width: 600px;
+}
+
+.recipe {
+    margin: 10px;
+}
+
+.small-body {
+    max-width: 800px;
+    padding-top: 30px;
+}
+
+.recipe-body {
+    padding: 20px 30px;
+    max-width: 800px;
+}

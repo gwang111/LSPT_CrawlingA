@@ -1,0 +1,87 @@
+/* start by removing all margin and padding for consistency */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Lato', Arial;
+  font-size: 16px;
+  line-height: 1.4;
+  color: #454545;
+  background-color: #fefefe;
+}
+/* centering the header and removing margins */
+header {
+  text-align: center;
+  padding-top: 1em;
+}
+footer {
+  text-align: center;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+h1, h2 {
+  font-family: 'Roboto Slab', Georgia;
+}
+
+/* make links less ugly */
+a {
+  color: #45b4a2;
+  font-family: 'Lato', Arial;
+}
+a:visited {
+  color: #268071;
+}
+
+a:link.no-underline {
+  text-decoration: none;
+}
+
+.main-page header {
+  color: #c8641e;
+}
+.main-page main {
+  padding: 1em 2em;
+}
+.main-page footer {
+  color: #c8641e;
+  padding: 0.5em;
+}
+
+.flex-container-parent {
+  display: flex;
+  flex-flow: column wrap;
+  width: 75%;
+  margin: auto;
+  
+  justify-content: space-around;
+  list-style: none;
+}
+
+.flex-container-child {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  list-style: none;
+}
+
+.flex-item {
+  border: 10px solid #c8641e;
+  padding: 5px;
+  width: 200px;
+  height: 150px;
+  margin: 20px 10px 10px 10px;
+  text-align: center;
+  line-height: 150px;
+  /* color: white; */
+  font-weight: bold;
+  font-size: 2em;
+  text-align: center;
+}
+.flex-item span {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: normal;
+}

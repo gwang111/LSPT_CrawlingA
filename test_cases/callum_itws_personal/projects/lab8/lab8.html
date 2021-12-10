@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+  <head>
+    <title>Lab 8 - IntroITWS</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link href="lab8.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="resources/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="lab8.js"></script>
+  </head>
+
+  <body>
+    <div id="bodyBlock">
+      <h1>Intro to ITWS - Lab 8</h1>
+      <h3>Your Name Here</h3>
+      <p class="part1">
+        Part 1: <a href="PHPMyAdmin.gif">XAMPP Screenshot</a>
+        <a href="PHPInfo.pdf">PHP Info PDF</a>
+      </p>
+      <form id="xssForm" name="xssForm" action="#" method="post" onsubmit="return false">
+        <fieldset>
+          <legend>Part 2: Simple XSS Exercise</legend>
+          <div class="formData">
+
+            <label class="field">Name:</label>
+            <div class="value"><input type="text" size="60" value="" name="name" id="name" /></div>
+
+            <label class="field">Comments:</label>
+            <div class="value">
+              <textarea rows="4" cols="60" name="comments" id="comments"
+                placeholder="After experimenting with the lab, copy your successful xss code into the body of this text area in the lab9.html file so that it displays when the page load">change the href of the browser window <script>window.location.href = "http://www.rpi.edu";</script></textarea>
+            </div>
+
+            <input type="submit" value="submit" id="submitButton" name="submitButton" />
+          </div>
+        </fieldset>
+      </form>
+      <div id="output">
+        The form comments will be output here on submit.
+      </div>
+    </div>
+  </body>
+
+</html>

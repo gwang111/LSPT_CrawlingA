@@ -1,0 +1,121 @@
+{
+  "menuItems": [
+    {
+      "name": "Lab 1",
+      "title": "Networking",
+      "URL": "lab1/lab1.docx",
+      "URLTitle": "Download Lab .docx",
+      "instructions": [
+        "The purpose of this lab is to get you familiar with some basic networking concepts, protocols, and tools. We will start the lab in class.",
+        "Please enter your answers in this document and save it as “Lab1-YourFullName.docx”. It is due in the Assignment area by EoD on the next class-day."
+      ]
+    },
+    {
+      "name": "Lab 2",
+      "title": "Resume",
+      "URL": "lab2/haubec2-CallumHauber-resume.html",
+      "URLTitle": "View Resume",
+      "instructions": [
+        "You should create a folder on your machine for this class. (ie ITWS1100)",
+        "Then create a folder within that folder for the programming portion of the class (ie iit)",
+        "Then create a folder within that folder for your lab(s) (ie lab2)",
+        "Then save the HTML template to your machine, placing it in that folder for the lab",
+        "Now edit it to create a resume like the example. You should enter your own information in the resume. Your information doesn't have to be perfect, but make your best effort; you can update and correct the dates and titles on your own.",
+        "After you submit your lab, you will be taking this resume down to the career center for review - so make it good!"
+      ]
+    },
+    {
+      "name": "Lab 3",
+      "title": "Website",
+      "URL": "../index.html",
+      "URLTitle": "View Website",
+      "instructions": [
+        "The web site will be placed in an \"iit\" subdirectory of your RCS file space, and it must be RCS password protected: you will give rights to Varad (pathav@rpi.edu) and me (plotkr2@rpi.edu). Follow these instructions to set up your protected directory.",
+        "You must have (at least) two pages: home and projects. Name these files: index.html (this will be your landing page, or home) projects.html",
+        "You must have a header, a menu, a content area, and a footer.",
+        "The only file in your root directory (at the root of your site) is the index.html page",
+        "All resources (e.g. CSS files) should be kept in a separate area(s) as per your design.",
+        "Populate your projects page with links to the Lab homework, beginning with your resume; continue to do this as we move forward.",
+        "As before, your code must be valid and properly indented. (And don't forget to set the title tag on each page.)"
+      ]
+    },
+    {
+      "name": "Lab 4",
+      "title": "RSS/Atom",
+      "URL": "lab4/index.html",
+      "URLTitle": "Go to RSS/Atom Page",
+      "instructions": [
+        "Create five items/entries, each linking to a news or blog posting, or any web content you find interesting (from five different sources). Alternatively, you can make it up if you are so inclined.",
+        "You may use the same items in both feeds.",
+        "Post the two files onto the \"projects\" page of your \"iit\" website. (The feeds must validate.)",
+        "In your review of the formats - take note of the layout of Channels and Items, etc.",
+        "To look at the feeds in an RSS/Atom reader (found online) or browser. Note: View the feed in your browser after posting it to your website: most browsers have built in RSS and Atom readers, but the feed must be published on a website to be properly rendered. You do NOT need to style you XML - if it looks like plain XML in your browser - this is ok."
+      ]
+    },
+    {
+      "name": "Lab 5",
+      "title": "JS Form",
+      "URL": "lab5/lab5.html",
+      "URLTitle": "View Lab",
+      "instructions": [
+        "Add your name to the HTML page just under the h1",
+        "Use the starting structure to validate the form code.",
+        "Add an onclick attribute to the textarea calling a function that will clear its value when the mouse cursor is placed in it.",
+        "Create a button below the Contact Information box that creates an alert() displaying the values of the first name and nickname in the following way: \"firstName lastName is nickname\" (e.g. the alert might say, \"Samuel Clemens is Mark Twain\")",
+        "HTML & CSS: Correct crimes 1 and 4 that have been (intentionally) committed in lab5form.html.",
+        "Extra: on first load of the page, focus the first form element. (No points will be deducted for not doing this.)"
+      ]
+    },
+    {
+      "name": "Lab 6",
+      "title": "jQuery",
+      "URL": "lab6/lab6.html",
+      "URLTitle": "View Lab",
+      "instructions": [
+        "Problem 1: When the user clicks on the h1, change the 'your name' to your own name (ie Joe Smith) change the text to be your name in small caps change the color to be something other than blue or black",
+        "Problem 2: Make the \"lorem ipsum\" paragraphs vanish over a 4/10 sec duration when a user clicks \"Hide text\"; make it appear within a 2 second duration when a user clicks \"Show text\"",
+        "Problem 3: When a normal list item is clicked, make it turn red using addClass. When a red list item is clicked change it back",
+        "Problem 4: lookup jquery toggle() and use this code on the \"Toggle Text\" link to show/hide the text"
+      ]
+    },
+    {
+      "name": "Lab 7",
+      "title": "Mockups",
+      "URL": "#",
+      "URLTitle": "View Mockups",
+      "instructions": [
+        "Each team is required to complete a design mock-up for their term project",
+        "Use information from the HCI guest lecture and in-class discussion and exercise to guide the creation of the mockups"
+      ]
+    },
+    {
+      "name": "Lab 8",
+      "title": "JS Website",
+      "URL": "lab8/lab8.html",
+      "URLTitle": "View Lab",
+      "instructions": [
+        "Install & check out your XAMPP environment",
+        "Setup your localhost iit folder",
+        "Try some simple XSS"
+      ]
+    },
+    {
+      "name": "Lab 9",
+      "title": "Labs JSON Builder",
+      "URL": "assets/labs_builder.js",
+      "URLTitle": "View Lab Code",
+      "instructions": [
+        ""
+      ]
+    },
+    {
+      "name": "Lab 10",
+      "title": "Movie Actor Database",
+      "URL": "lab10/index.php",
+      "URLTitle": "View Lab",
+      "instructions": [
+        ""
+      ]
+    }
+  ]
+}

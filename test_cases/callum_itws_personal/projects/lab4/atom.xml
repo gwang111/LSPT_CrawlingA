@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<feed xmlns="http://www.w3.org/2005/Atom"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:media="http://search.yahoo.com/mrss/"
+	xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd"
+	xmlns:feedburner="http://rssnamespace.org/feedburner/ext/1.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/">
+
+	<title>ITWS Lab 4 Curated Feed</title>
+	<subtitle>A combination of news plus some things I find interesting</subtitle>
+	<link href="https://afsws.rpi.edu/AFS/home/58/haubec2/public_html/iit/projects/lab4/atom.xml" rel="self" />
+	<link href="https://afsws.rpi.edu/AFS/home/58/haubec2/public_html/iit" />
+	<id>urn:uuid:60a76c80-d399-11d9-b91C-0003939e0af6</id>
+	<updated>2021-10-03T20:31:40Z</updated>
+	<author>
+		<name>Callum Hauber</name>
+		<email>callumhauber@gmail.com</email>
+	</author>
+
+	<entry>
+		<title>How to Find 'Stalkerware' on Your Devices</title>
+		<link href="https://www.nytimes.com/2021/09/29/technology/personaltech/stalkerware-apps-protection.html" />
+		<id>https://www.nytimes.com/2021/09/29/technology/personaltech/stalkerware-apps-protection.html</id>
+		<link href="https://www.nytimes.com/2021/09/29/technology/personaltech/stalkerware-apps-protection.html" rel="standout"/>
+		<summary>These spyware apps record your conversations, location and everything you type, all while camouflaged as a calculator or calendar.</summary>
+		<dc:creator>Brian X. Chen</dc:creator>
+		<published>2021-09-29T18:53:54+00:00</published>
+		<updated>2021-09-29T18:53:54+00:00</updated>
+		<category scheme="http://www.nytimes.com/namespaces/keywords/des" term="Content Type: Service" />
+		<category scheme="http://www.nytimes.com/namespaces/keywords/des" term="Mobile Applications" />
+		<category scheme="http://www.nytimes.com/namespaces/keywords/des" term="Computers and the Internet" />
+		<category scheme="http://www.nytimes.com/namespaces/keywords/des" term="Data-Mining and Database Marketing" />
+		<category scheme="http://www.nytimes.com/namespaces/keywords/des" term="Computer Security" />
+		<category scheme="http://www.nytimes.com/namespaces/keywords/des" term="Smartphones" />
+		<category scheme="http://www.nytimes.com/namespaces/keywords/des" term="Software" />
+		<category scheme="http://www.nytimes.com/namespaces/keywords/des" term="Android (Operating System)" />
+		<category scheme="http://www.nytimes.com/namespaces/keywords/des" term="Privacy" />
+		<category scheme="http://www.nytimes.com/namespaces/keywords/des" term="Stalking (Crime)" />
+		<category scheme="http://www.nytimes.com/namespaces/keywords/des" term="iPhone" />
+		<category scheme="http://www.nytimes.com/namespaces/keywords/nyt_org" term="Apple Inc" />
+		<category scheme="http://www.nytimes.com/namespaces/keywords/nyt_org" term="Google Inc" />
+		<media:content height="151" medium="image" url="https://static01.nyt.com/images/2021/09/29/business/29Techfix-illo/29Techfix-illo-moth.jpg" width="151"/>
+		<media:credit>Glenn Harvey</media:credit>
+	</entry>
+
+	<entry>
+		<title>VISION Radio S01E39</title>
+		<itunes:subtitle>VISION‌ ‌Radio‌ ‌this‌ ‌week:‌ ‘Something Bad’ a big collab between Mefjus and Black Sun Empire, out now on Blackout. More new music by Tsuruda &amp; Chee, Kasra, Flowdan, The Caracal Project &amp; Rohaan, and more.. Enjoy!</itunes:subtitle>
+		<itunes:summary><![CDATA[VISION‌ ‌Radio‌ ‌this‌ ‌week:‌ ‘Something Bad’ a big collab between Mefjus and Black Sun Empire, out now on Blackout. More new music by Tsuruda &amp; Chee, Kasra, Flowdan, The Caracal Project &amp; Rohaan, and more.. Enjoy! ‌ Subscribe to VISION Radio: https://visionrecordings.nl/radio Listen to our Spotify playlist: ‌​​​‌https://sptfy.com/5nap Support us on Patreon:‌ ‌​​‌https://patreon.com/visionrecordings Shop on our webstore: https://store.visionrecordings.nl Follow VISION Twitter: https://twitter.com/visionrecs Instagram: https://instagram.com/visionrecordings Facebook: https://facebook.com/VisionRecordings Spotify: https://play.spotify.com/user/visionrecordings Mefjus &amp; Black Sun Empire - Something Bad • BLACKOUT Kasra - Kanjiru • CRITICAL Tsuruda x Chee - Trailblazers • DEADBEATS Seppa - Imber • BANDCAMP Duke &amp; Jones - Trenches Ft. Flowdan • DEADBEATS Connor Q - Nightfall • VALE Current Value - Recovery File • YUKU The Caracal Project &amp; Rohaan - Turbocharged • PILOT Askel &amp; Elere - Do I Know U • SOULVENT Gydra &amp; Nuvertal - Meditation (Audio Remix) • EATBRAIN Tyrone - Belk • THE NORTH QUARTER Dunk - Mambo • DISPATCH Dj Ride - BYMYOWN • VISION Theoretical - Hunting • DELTA9 Yunis - Benti • YUKU Foreign Beggars, Laville &amp; Alix Perez - Reveal (Alix Perez Remix) • DNB4PEACE Synergy - Liquid • PATREON NickBee - Choice Time • EKOU • VISION RADIO RELOAD Subp Yao - Talk • YUKU Amon Tobin - Black As The Sun • NOMARK]]></itunes:summary>
+		<summary>VISION‌ ‌Radio‌ ‌this‌ ‌week:‌ ‘Something Bad’ a big collab between Mefjus and Black Sun Empire, out now on Blackout. More new music by Tsuruda &amp; Chee, Kasra, Flowdan, The Caracal Project &amp; Rohaan, and more.. Enjoy!&lt;img src="http://feeds.feedburner.com/~r/NoisiaRadio/~4/wUtuBFh57YM" height="1" width="1" alt=""/&gt;</summary>
+		<link href="http://feeds.noisia.nl/~r/NoisiaRadio/~3/wUtuBFh57YM/" />
+
+		<id>http://podcast.noisia.nl/?name=2021-09-29_vision_radio_s01e39.mp3</id>
+		<itunes:duration>1:00:00</itunes:duration>
+		<itunes:image href="http://podcast.noisia.nl/images/2021-09-29_vision_radio_s01e39.jpg" />
+		<author>
+			<name>VISION</name>
+			<email>jaap@visionrecordings.nl</email>
+		</author>
+		<itunes:author>VISION</itunes:author>
+		<itunes:keywords>Vision, Podcast, Vision Radio, Radio, Noisia, Electronic music, Drum &amp; bass, Beats</itunes:keywords>
+		<itunes:explicit>no</itunes:explicit>
+		<published>2021-09-29T12:46:00+02:00</published>
+		<updated>2021-09-29T12:46:00+02:00</updated>
+		<feedburner:origLink>http://podcast.noisia.nl/?name=2021-09-29_vision_radio_s01e39.mp3</feedburner:origLink>
+		<link rel="enclosure" href="http://feeds.noisia.nl/~r/NoisiaRadio/~5/43vHS1YExl8/2021-09-29_vision_radio_s01e39.mp3" length="87218581" type="audio/mpeg" />
+		<feedburner:origEnclosureLink>http://podcast.noisia.nl/media/2021-09-29_vision_radio_s01e39.mp3</feedburner:origEnclosureLink>
+	</entry>
+
+	<entry>
+		<title>Endangered</title>
+		<link href="https://xkcd.com/2523/" />
+		<media:content height="445" medium="image" url="https://imgs.xkcd.com/comics/endangered.png" width="347"/>
+		<media:description>The list includes polio, Guinea worm, and this one particular enterovirus strain that they've been tracking out of spite after it went around the lab a few years ago.</media:description>
+		<published>2021-10-01T04:00:00-00:00</published>
+		<updated>2021-10-01T04:00:00-00:00</updated>
+		<id>https://xkcd.com/2523/</id>
+	</entry>
+
+	<entry>
+		<id>yt:video:aFPJf-wKTd0</id>
+		<title>How Hidden Technology Transformed Bowling</title>
+		<link rel="alternate" href="https://www.youtube.com/watch?v=aFPJf-wKTd0"/>
+		<author>
+			<name>Veritasium</name>
+			<uri>https://www.youtube.com/channel/UCHnyfMqiRRG1u-2MsSQLbXA</uri>
+		</author>
+		<published>2021-09-25T12:02:22+00:00</published>
+		<updated>2021-09-28T01:15:31+00:00</updated>
+		<media:title>How Hidden Technology Transformed Bowling</media:title>
+		<media:content url="https://www.youtube.com/v/aFPJf-wKTd0?version=3" type="application/x-shockwave-flash" width="640" height="390"/>
+		<media:thumbnail url="https://i2.ytimg.com/vi/aFPJf-wKTd0/hqdefault.jpg" width="480" height="360"/>
+		<media:description>Bowling has been reinvented many times over the past seven thousand years but especially in the last 30. This is the fascinating physics of balls, oil, lane and pins. A portion of this video was sponsored by Salesforce. Go to https://salesforce.com/veritasium to learn more. Huge thanks to Steve Kloempken and all of Storm Bowling for letting us visit and get a glimpse into the crazy world of bowling. Huge thanks to legends Chris Barnes and Pete Weber for taking the time to bowl with us. Huge thanks to Creative Electron for their help with getting the bowling balls X-rayed. Check out their work here: https://creativeelectron.com/ Thanks to Ron Hatfield and James Freeman for their help with research. Check out their great book, Bowling Beyond the Basics: https://ve42.co/HatfieldFreeman Thanks to the United States Bowling Congress (USBC) and Professional Bowlers Association (PBA) for their help with accessing archival data and footage. Special thanks to Rod Cross for physics consultation. Thanks to Bill Guszczo for giving us the idea to make this video in the first place. ▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀ References: Freeman, James, and Ron Hatfield. Bowling beyond the Basics: What's Really Happening on the Lanes, and What You Can Do about It. BowlSmart, 2018. -- https://ve42.co/HatfieldFreeman N. Stremmel, P. Ridenour and S. Sterbenz. “Identifying the Critical Factors That Contribute to Bowling Ball Motion on a Bowling Lane.” United States Bowling Congress, 2008. -- https://ve42.co/BallMotionASQ USBC Equipment Specifications and Certification Team. “Ball Motion Study: Phase I and II Final Report.” United States Bowling Congress, 2008. -- https://ve42.co/USBCBallMotion Brettingen, Patrick, and Nicki Mours. “USBC static weight limits remain relevant.” United States Bowling Congress, 2011. -- https://ve42.co/USBCStaticWeight Article on lane oil origins -- https://ve42.co/OilOrigins Luna, Richard. “Bruce Pluckhahn says there's a little bit of bowling…” United Press International Archives, 1984. -- https://ve42.co/BowlingHistory Johnson, Brody D. “The Physics of Bowling: How good bowlers stay off the straight and narrow.” St. Louis University. -- https://ve42.co/JohnsonPhysicsPpt Talamo, Jim. “The Physics of Bowling Balls.” -- https://ve42.co/TalamoPhysicsPpt Thompson, Ted. “Breakdown and Carrydown - Then and Now.” Kegel. 2012. -- https://ve42.co/ThompsonKegel Frohlich, Cliff. “What Makes Bowling Balls Hook?” American Journal of Physics, vol. 72, no. 9, 2004, pp. 1170–1177., https://doi.org/10.1119/1.1767099. -- https://ve42.co/FrohlichHook Article on bowling’s ranking in participatory sports -- https://ve42.co/BowlingRank Speranza, Dan, and Dave Nestor. “Initial Oil Absorption Results.” United States Bowling Congress, 2016. -- https://ve42.co/USBCOilAbsorption D. Benner, N. Mours, and P. Ridenour. “Pin Carry Study: Bowl Expo 2009.” United States Bowling Congress, 2009. -- https://ve42.co/USBCPinCarry Hopkins, D. C., and J. D. Patterson. “Bowling Frames: Paths of a Bowling Ball.” American Journal of Physics, vol. 45, no. 3, 1977, pp. 263–266., https://doi.org/10.1119/1.11005. -- https://ve42.co/HopkinsPath Normani, Franco. “The Physics of Bowling.” Real World Physics Problems. -- https://ve42.co/NormaniPhysics Horaczek, Stan. “The insides of pro bowling balls will make your head spin.” Popular Science, 2020. -- https://ve42.co/HoraczekSpin House shot oil pattern -- https://ve42.co/HouseOil. Licensed under Creative Commons: By Attribution 4.0. ▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀ Special thanks to Patreon supporters: Andrew, Diffbot, Micah Mangione, MJP, Gnare, Nick DiCandilo, Dave Kircher, Edward Larsen, Burt Humburg, Blake Byers, Dumky, Evgeny Skvortsov, Meekay, Bill Linder, Paul Peijzel, Mac Malkawi, Michael Schneider, Big Badaboom, Ludovic Robillard, Jim buckmaster, fanime96, Juan Benet, Ruslan Khroma, Robert Blum, Richard Sundvall, Lee Redden, Vincent, Marinus Kuivenhoven, Alfred Wallace, Clayton Greenwell, Michael Krugman, Cy 'kkm' K'Nelson, Sam Lutfi, Ron Neal Written by Derek Muller and Emily Zhang Animations by Mike Radjabov and Iván Tello Filmed by Derek Muller, Trenton Oliver, and Emily Zhang Edited by Trenton Oliver SFX by Shaun Clifford Additional video supplied by Getty Images Music from Epidemic Sounds Produced by Derek Muller, Petr Lebedev, and Emily Zhang</media:description>
+	</entry>
+
+	<entry>
+		<title>NPR News: 10-03-2021 3PM ET</title>
+		<summary>
+			<![CDATA[ NPR News: 10-03-2021 3PM ET ]]>
+		</summary>
+		<published>2021-10-03T15:00:00-04:00</published>
+		<updated>2021-10-03T15:00:00-04:00</updated>
+		<media:copyright>Copyright 2007-2019 NPR - For Personal Use Only</media:copyright>
+		<id>urn:uuid:853bb2f7-5808-4446-94f0-248fa26f844c</id>
+		<itunes:title>NPR News: 10-03-2021 3PM ET</itunes:title>
+		<itunes:author>NPR</itunes:author>
+		<itunes:summary>
+			<![CDATA[ NPR News: 10-03-2021 3PM ET ]]>
+		</itunes:summary>
+		<itunes:duration>300</itunes:duration>
+		<itunes:explicit>no</itunes:explicit>
+		<content>
+			<![CDATA[ NPR News: 10-03-2021 3PM ET ]]>
+		</content>
+		<link rel="enclosure" href="https://play.podtrac.com/npr-500005/edge1.pod.npr.org/anon.npr-mp3/npr/newscasts/2021/10/03/newscast150736.mp3?awCollectionId=500005&amp;awEpisodeId=1042870574&amp;orgId=1&amp;d=300&amp;p=500005&amp;story=1042870574&amp;t=podcast&amp;e=1042870574&amp;size=4500000&amp;ft=pod&amp;f=500005" length="4500000" type="audio/mpeg"/>
+	</entry>
+
+</feed>
