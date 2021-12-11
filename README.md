@@ -2,7 +2,11 @@
 Crawling A for class project
 
 ## Environment Setup
-`pip install beautifulsoup4 requests`
+* Install Python 3
+* Run `pip install beautifulsoup4 requests` to get required packages
+
+## Note: Local Test Cases
+* Use a webserver such as apache, or use something like XAMPP to host the test websites locally
 
 ## Note: Running crawler
 Since we use Github REST API and Reddit API for crawling github and reddit pages, you need to set up your own access token for those API before running the crawler.

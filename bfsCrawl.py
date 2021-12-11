@@ -4,16 +4,13 @@ from bs4 import BeautifulSoup
 import logging
 
 logging.basicConfig(format='%(asctime)s - %(message)s', level=logging.INFO)
-testPoliteness = ""
 
 class urlFetcher:
     def __init__(self, crawledUrls, badUrls):
         self.rpiRobot = urllib.robotparser.RobotFileParser()
         self.wikiRobot = urllib.robotparser.RobotFileParser()
-        self.testRobot = urllib.robotparser.RobotFileParser()
         self.politeness(self.rpiRobot, "http://rpi.edu/robots.txt")
         self.politeness(self.wikiRobot, "https://en.wikipedia.org/robots.txt")
-        self.politeness(self.testRobot, testPoliteness)
         self.crawledUrls = crawledUrls
         self.badUrls = badUrls
 
@@ -24,13 +21,15 @@ class urlFetcher:
     def getUrls(self, url, robot, processUrl):
         urlsFound = set()
         try:
-            if not robot.can_fetch("*", url):
+            if robot and not robot.can_fetch("*", url):
                 # url in robots.txt
+                logging.info("[URL IGNORED, IN ROBOTS.TXT] URL: %s", url)
                 return urlsFound
             r = requests.get(url)
             self.crawledUrls[url] = time.time()
             print(len(self.crawledUrls.keys()))
             if r.status_code == 404:
+                logging.info("[BAD URL: 404] URL: %s", url)
                 self.crawledUrls.pop(url)
                 self.badUrls.add(url)
                 return urlsFound
@@ -38,11 +37,12 @@ class urlFetcher:
             for link in soup.find_all('a'):
                 path = link.get('href')
                 if (path is not None):
-                    path = processUrl(url, path);
+                    path = processUrl(url, path)
                     if path == "":
+                        logging.info("[LINK NOT IN DOMAIN] LINK: %s", urljoin(url, path))
                         # url not within domain
                         continue
-                    if (robot.can_fetch("*", path) and path not in self.badUrls):
+                    if (robot is None or robot.can_fetch("*", path) and path not in self.badUrls):
                         urlsFound.add(path)
         except requests.exceptions.RequestException as err:
             print(url)
@@ -69,7 +69,7 @@ class urlFetcher:
         return self.getUrls(url, self.wikiRobot, self.processWikiUrls)
     
     def getTestUrls(self, url):
-        return self.getUrls(url, self.testRobot, self.processTestUrls)
+        return self.getUrls(url, None, self.processTestUrls)
 
     def processRPIUrls(self, url, path):
         if 'rpi' not in path:
@@ -111,8 +111,11 @@ class urlFetcher:
             return ""
         return path
     
-    def processTestUrls(self, url, path):
-        return urljoin('https://en.wikipedia.org', path)
+    def processTestUrls(self, url, path, root = "http://localhost/ITWS-Cooking-Site/"):
+        joined_url = urljoin(url, path)
+        if root not in joined_url:
+            joined_url = ""
+        return joined_url
 
 class crawlThread (threading.Thread):
     def __init__(self, threadID, bfs, seedUrl, urlFetcher, counter = None):
@@ -140,16 +143,18 @@ class bfsCrawler:
 
     def crawl(self):
         if len(self.seeds) == 1:
-            logging.info("[START CRAWL] (rpi/wiki) 1 URL")
+            logging.info("[START CRAWL] Seed URL: %s", self.seeds[0])
             self.BFS(self.seeds[0], self.website, self.counter)
         else:
-            logging.info("[START CRAWL] (rpi/wiki) >1 URL")
+            logging.info("[START CRAWL] >1 URL")
             threads = []
-            for url in self.seeds:
-                thread = crawlThread(1, self.BFS, url, self.website, self.counter)
+            for threadID, url in enumerate(self.seeds):
+                logging.info("[START CRAWL THREAD] ID: %d URL: %s", threadID, url)
+                thread = crawlThread(threadID, self.BFS, url, self.website, self.counter)
                 thread.start()
                 threads.append(thread)
             for t in threads:
+                logging.info("[JOIN CRAWL THREAD]")
                 t.join()
 
     def BFS(self, seed, urlFilter = "wiki", counter = None):
@@ -177,6 +182,7 @@ class bfsCrawler:
             # Dequeue a vertex from
             # queue and print it
             url = urlqueue.pop(0)
+            logging.info("[CRAWLER VISITED URL] URL: %s", url)
             print (url, end = " ")
     
             # Get all adjacent vertices of the
@@ -186,6 +192,7 @@ class bfsCrawler:
             nextUrls = getUrls(url)
             for nextUrl in nextUrls:
                 if nextUrl not in self.visitedUrls:
+                    logging.info("[LINK FOUND AND ADDED]\n%sFROM: %s\n%sTO: %s", str().rjust(26), url, str().rjust(26), nextUrl)
                     urlqueue.append(nextUrl)
                     self.visitedUrls.add(nextUrl)
 
