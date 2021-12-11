@@ -183,7 +183,9 @@ class bfsCrawler:
             # queue and print it
             url = urlqueue.pop(0)
             logging.info("[CRAWLER VISITED URL] URL: %s", url)
-            print (url, end = " ")
+            
+            # This is where we would send data to link analysis, document data store, etc.
+            # Also where we would send the url to JessePriorityQueue for recrawling
     
             # Get all adjacent vertices of the
             # dequeued vertex s. If a adjacent
