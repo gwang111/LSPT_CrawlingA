@@ -39,7 +39,7 @@ class urlFetcher:
                 if (path is not None):
                     path = processUrl(url, path)
                     if path == "":
-                        logging.info("[LINK NOT IN DOMAIN] LINK: %s", urljoin(url, path))
+                        logging.info("[LINK NOT IN DOMAIN]\n%sFROM: %s\n%sTO: %s", str().rjust(26), url, str().rjust(26), urljoin(url, path))
                         # url not within domain
                         continue
                     if (robot is None or robot.can_fetch("*", path) and path not in self.badUrls):
@@ -146,7 +146,7 @@ class bfsCrawler:
             logging.info("[START CRAWL] Seed URL: %s", self.seeds[0])
             self.BFS(self.seeds[0], self.website, self.counter)
         else:
-            logging.info("[START CRAWL] >1 URL")
+            logging.info("[START CRAWL THREADS] >1 URL")
             threads = []
             for threadID, url in enumerate(self.seeds):
                 logging.info("[START CRAWL THREAD] ID: %d URL: %s", threadID, url)
@@ -174,6 +174,7 @@ class bfsCrawler:
             return
     
         while urlqueue:
+            logging.info("[CRAWLER COUNTER]: %d", counter)
             if counter == 0:
                 return            
             if counter != None:

@@ -53,9 +53,9 @@ if __name__ == "__main__":
     wikiSeeds = ['https://en.wikipedia.org/wiki/Tiger', 'https://zh.wikipedia.org/wiki/%E8%99%8E']
     rpiSeed = ['https://rpi.edu']
     wikiSeed = ['https://en.wikipedia.org/wiki/Tiger']
-    testSeed = ['http://localhost/ITWS-Cooking-Site/']
+    testSeed = ['http://localhost/ITWS-Cooking-Site/', 'http://localhost/ITWS-Cooking-Site/', 'http://localhost/ITWS-Cooking-Site/', 'http://localhost/ITWS-Cooking-Site/']
     # you can pass in {} or set() to the crawler creator if you want to set crawledUrls / badUrls to be global var
-    a = SissiCrawler("test", testSeed, None, 30, None, None) # rpi crawler
+    a = SissiCrawler("test", testSeed, None, 30, None, None) # test crawler
     #a = SissiCrawler("rpi", rpiSeeds, None, 30, None, None) # rpi crawler, threaded
     #a = SissiCrawler("wiki", wikiSeed, None, 30, None, None) # wiki crawler
     #a = SissiCrawler("wiki", wikiSeeds, None, 30, None, None) # wiki crawler threaded
